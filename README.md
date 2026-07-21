@@ -1,208 +1,185 @@
-# 🛍️ E-Commerce Website
+<div align="center">
 
-A full-stack E-Commerce web application built using the MERN stack. The platform provides a modern shopping experience with user authentication, product management, shopping cart functionality, secure payment integration, and responsive UI.
+# 🛒 MERN E-Commerce Website
+
+A modern Full-Stack E-Commerce platform built using the MERN Stack with secure authentication, payment integration, and an intuitive shopping experience.
+
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Node](https://img.shields.io/badge/Node.js-Express-green?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styled-blue?logo=tailwindcss)
+![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
+![Stripe](https://img.shields.io/badge/Stripe-Payment-purple?logo=stripe)
+![Razorpay](https://img.shields.io/badge/Razorpay-Payment-blue)
+
+</div>
 
 ---
 
-## 🚀 Features
+# 📌 Overview
 
-### User Features
-- User Registration & Login
+This project is a fully functional E-Commerce application where users can browse products, manage their shopping cart, securely authenticate, and complete purchases using online payment gateways.
+
+The application also includes an admin panel for product and order management.
+
+---
+
+# 🚀 Features
+
+### 👤 User
+
+- Register/Login
 - JWT Authentication
 - Browse Products
-- Product Categories
 - Search Products
-- Add to Cart
-- Update Cart Quantity
-- Checkout
-- Secure Payments
+- Filter by Category
+- Shopping Cart
+- Secure Checkout
+- Stripe Payment
+- Razorpay Payment
 - Responsive Design
 
-### Admin Features
+### 🔑 Admin
+
 - Add Products
 - Update Products
 - Delete Products
-- Upload Product Images
+- Upload Images
 - Manage Orders
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
-### Frontend
+## Frontend
+
 - React.js
 - Vite
 - Tailwind CSS
-- React Router
 - Axios
-- React Toastify
+- React Router
 
-### Backend
+## Backend
+
 - Node.js
 - Express.js
 
-### Database
+## Database
+
 - MongoDB
 - Mongoose
 
-### Authentication
+## Authentication
+
 - JWT
 - bcrypt
 
-### Cloud Services
+## Cloud
+
 - Cloudinary
 
-### Payment Gateway
-- Razorpay
+## Payments
+
 - Stripe
+- Razorpay
 
 ---
 
-## 📂 Project Structure
+# 📂 Folder Structure
 
-```
-E-Commerce/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│
-├── Backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── server.js
-│   ├── package.json
-│
-└── README.md
+```text
+Backend/
+frontend/
+README.md
+.gitignore
 ```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### Clone Repository
+Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/E-Commerce.git
+git clone https://github.com/yourusername/E-Commerce-Website.git
 ```
 
-Move inside the project
-
-```bash
-cd E-Commerce
-```
-
----
-
-## Backend Setup
-
-Move into backend
+Backend
 
 ```bash
 cd Backend
-```
-
-Install dependencies
-
-```bash
 npm install
-```
-
-Start Backend
-
-```bash
-npm run server
-```
-
-or
-
-```bash
 npm start
 ```
 
----
-
-## Frontend Setup
-
-Open another terminal
+Frontend
 
 ```bash
 cd frontend
-```
-
-Install dependencies
-
-```bash
 npm install
-```
-
-Run Frontend
-
-```bash
 npm run dev
 ```
 
 ---
 
-## Environment Variables
+# 🔐 Environment Variables
 
-Create a `.env` file inside the **Backend** folder.
-
-Example:
+Create a `.env` file inside the Backend folder.
 
 ```env
-PORT=5000
+PORT=
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=
 
-JWT_SECRET=your_secret_key
+JWT_SECRET=
 
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 
-RAZORPAY_KEY_ID=your_key
-RAZORPAY_SECRET=your_secret
+STRIPE_SECRET_KEY=
 
-STRIPE_SECRET_KEY=your_secret_key
+RAZORPAY_KEY_ID=
+RAZORPAY_SECRET=
 ```
 
 ---
 
-## 📸 Screenshots
+# 📷 Screenshots
 
-Add screenshots here.
+| Home | Products |
+|------|----------|
+| ![](screenshots/home.png) | ![](screenshots/products.png) |
 
-Example:
+| Cart | Checkout |
+|------|----------|
+| ![](screenshots/cart.png) | ![](screenshots/checkout.png) |
 
-- Home Page
-- Product Page
-- Cart
-- Login
-- Checkout
-- Admin Dashboard
+| Admin |
+|------|
+| ![](screenshots/admin.png) |
 
 ---
 
-## Future Improvements
+# 🔮 Future Improvements
 
 - Wishlist
 - Product Reviews
-- Order Tracking
 - Coupons
 - Email Verification
 - Password Reset
+- Order Tracking
 - Dark Mode
 
 ---
 
-## Author
+# 👨‍💻 Author
 
 **Manaswi KA**
 
-GitHub: https://github.com/yourusername
+- GitHub: https://github.com/yourusername
+- LinkedIn: https://linkedin.com/in/yourprofile
 
-LinkedIn: https://linkedin.com/in/yourprofile
+---
+
+## ⭐ If you like this project, don't forget to star the repository.
