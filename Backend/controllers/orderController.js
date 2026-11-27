@@ -86,7 +86,7 @@ const placeOrderStripe = async (req,res) => {
 
         const session = await stripe.checkout.sessions.create({
             success_url: `${origin}/verify ? success=true & orderId = ${newOrder._id}` , 
-            cancel_urel: `${origin}/verify ? success=false & orderId = ${newOrder._id}` , 
+            cancel_url: `${origin}/verify ? success=false & orderId = ${newOrder._id}` , 
             line_items,
             mode: 'payment',
         })
@@ -140,7 +140,7 @@ const placeOrderRazorpay = async (req,res) => {
         const options = {
             amount : amount * 100,
             currency : currency.toUpperCase(),
-            reciept : newOrder._id.toString()
+            receipt : newOrder._id.toString()
         }
 
         await razorpayInstance.orders.create(options,(error,order) => {
@@ -165,7 +165,7 @@ const verifyRazorPay = async (req,res) => {
         const orderInfo = await razorpayInstance.orders.fetch(razorpay_order_id)
         
         if (orderInfo.status === 'paid') {
-            await orderModel.findByIdAndUpdate(orderInfo.reciept,{payment:true});
+            await orderModel.findByIdAndUpdate(orderInfo.receipt,{payment:true});
             await userModel.findByIdAndUpdate(userId, {cartData:{}})
             res.json({success: true, message: "Payment Successful"})
         } else {
