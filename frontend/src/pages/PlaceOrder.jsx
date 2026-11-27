@@ -95,7 +95,7 @@ const PlaceOrder = () => {
         break;
 
         case 'stripe':
-            const responseStripe = await axios.post(backendUrl + '/api/order/stripe', orderData,{header:{token}})
+            const responseStripe = await axios.post(backendUrl + '/api/order/stripe', orderData,{headers:{token}})
             if (responseStripe.data.success) {
               const {session_url} = responseStripe.data
               window.location.replace(session_url)
@@ -132,17 +132,17 @@ const PlaceOrder = () => {
             <Title text1={'DELIVERY'} text2={'INFORMATION'}/>
           </div>
 
-          <div onclick={()=>setMethod('stripe')} className='flex gap-3'>
+          <div onClick={()=>setMethod('stripe')} className='flex gap-3'>
             <input required onChange={onChangeHandler} name='firstName' value={formData.firstName} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='First Name' />
             <input required onChange={onChangeHandler} name='lastName' value={formData.lastName} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='Last Name' />
           </div>
           <input required onChange={onChangeHandler} name='email' value={formData.email} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='Email Address' />
           <input required onChange={onChangeHandler} name='street' value={formData.street} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='Street' />
-          <div onclick={()=>setMethod('razorpay')} className='flex gap-3'>
+          <div onClick={()=>setMethod('razorpay')} className='flex gap-3'>
             <input required onChange={onChangeHandler} name='city' value={formData.city} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='City' />
             <input required onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='State' />
           </div>
-          <div onclick={()=>setMethod()} className='flex gap-3'>
+          <div onClick={()=>setMethod()} className='flex gap-3'>
             <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='number' placeholder='Zipcode' />
             <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-300 rounded py-1.5 px-3.5 w-full ${}' type='text' placeholder='Country' />
           </div>
